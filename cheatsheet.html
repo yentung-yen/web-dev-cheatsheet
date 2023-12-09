@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./cheatsheet-style.css">
+    <title>Cheatsheet</title>
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <h2 id="html">HTML</h2>
+
+        <h3>Creating Tables</h3>
+        <div class="explanation">
+            <pre>
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;&lt;/th&gt;
+                        &lt;th scope="col"&gt;Column 1&lt;/th&gt;
+                        &lt;th scope="col"&gt;Column 2&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;th scope="row"&gt;Row Header&lt;/th&gt;
+                        &lt;td&gt;Table Data&lt;/td&gt;
+                        &lt;td&gt;Table Data&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </pre>
+        </div>
+
+        <h3>Table Head, Table Body & Table Footer</h3>
+        <div class="explanation">
+            <pre>
+                &lt;table&gt;
+                    &lt;!-- Table Head --&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;&lt;/th&gt;
+                            &lt;th scope="col"&gt;Column 1&lt;/th&gt;
+                            &lt;th scope="col"&gt;Column 2&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+
+                    &lt;!-- Table Body --&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;th scope="row"&gt;Row Header&lt;/th&gt;
+                            &lt;td&gt;Table Data&lt;/td&gt;
+                            &lt;td&gt;Table Data&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+
+                    &lt;!-- Table Footer --&gt;
+                    &lt;tfoot&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;Table Footer&lt;/th&gt;
+                            &lt;td&gt; &lt;/td&gt;
+                            &lt;td&gt; &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tfoot&gt;
+                &lt;/table&gt;
+            </pre>              
+            
+            <ul>
+                <li>Section off long tables.</li>
+                <li>thead only contain table headings.</li>
+                <li>tbody contains all table data.</li>
+                <li>tfoot usually contain sums, differences, and other data results.</li>
+            </ul>
+        </div>
+        
+        <h3>Column Span & Row Span</h3>
+        <div class="explanation">
+            <pre>
+                &lt;!-- Column Span --&gt;
+                &lt;td colspan="2"&gt;This column spans 2 columns&lt;/td&gt;
+
+                &lt;!-- Row Span --&gt;
+                &lt;td rowspan="2"&gt;This row spans 2 rows&lt;/td&gt;
+            </pre>
+
+            <ul>
+                <li>Takes an integer (>= 1) to denote the number of columns/rows it spans across.</li>
+            </ul>
+        </div>
+
+        <h3>Header</h3>
+        <div class="explanation">
+            <pre>
+                &lt;!-- Method 1: header tag --&gt;
+                &lt;header&gt;
+                    &lt;!-- Navigation or introductory content --&gt;
+                &lt;/header&gt;
+
+                &lt;!-- Method 2: div tag with header id --&gt;
+                &lt;div id="header&gt;
+                    &lt;!-- Navigation or introductory content --&gt;
+                &lt;/div&gt;
+            </pre>
+
+            <ul>
+                <li>Usually contains navigational links or introductory content.</li>
+            </ul>
+        </div>
+
+        <h3>Footer</h3>
+        <div class="explanation">
+            <pre>
+                &lt;footer&gt;
+                    &lt;!-- footer content --&gt;
+                &lt;/footer&gt;
+            </pre>
+
+            <ul>
+                Usually contains:
+                <li>Contact information</li>
+                <li>Copyright information</li>
+                <li>Terms of use</li>
+                <li>Site Map</li>
+                <li>Reference to page links</li>
+            </ul>
+        </div>
+
+        <h3>Section & Article</h3>
+        <div class="explanation">
+            <pre>
+                &lt;section&gt;
+                    &lt;article&gt;
+                        &lt;!-- body content --&gt;
+                    &lt;/article&gt;
+                &lt;/section&gt;
+            </pre>
+
+            <ul>
+                Section:
+                <li>Used to split chapters, headings, topics, theme, etc.</li>
+            </ul>
+
+            <ul>
+                Article:
+                <li>Contains the body of each section.</li>
+            </ul>
+        </div>
+
+        <h3>Aside</h3>
+        <div class="explanation">
+            <pre>
+                &lt;aside&gt;
+                    &lt;!-- aside content --&gt;
+                &lt;/aside&gt;
+            </pre>
+
+            <ul>
+                <li>Used to mark additional information that isn't required in order to understand the main content.</li>
+                <br>
+                Example:
+                <li>Bibliographies</li>
+                <li>Endnotes</li>
+                <li>Comments</li>
+                <li>Pull quotes</li>
+                <li>Editorial sidebars</li>
+            </ul>
+        </div>
+
+        <h3>Attaching Images - Figure & Figcaption</h3>
+        <div class="explanation">
+            <pre>
+                &lt;figure&gt;
+                    &lt;img src="image-link"&gt;
+                    &lt;figcaption&gt;Image Description&lt;/figcaption&gt;
+                &lt;/figure&gt;
+            </pre>
+
+            <ul>
+                <li>figcaption - Adds an image description to the bottom of a figure.</li>
+            </ul>
+        </div>
+
+        <h3>Attaching Audio</h3>
+        <div class="explanation">
+            <pre>
+                &lt;audio controls&gt;
+                    &lt;source src="audio-file-link/url" type="audio/mp3"&gt;
+                &lt;/audio&gt;
+            </pre>
+
+            <ul>
+                <li>controls: shows the audio controls on the browser such as play and mute.</li>
+            </ul>
+        </div>
+
+        <h3>Attaching Video & Gifs</h3>
+        <div class="explanation">
+            <pre>
+                &lt;video src="video-file-link/url" controls&gt;
+                    Video not supported
+                &lt;/video&gt;
+
+                &lt;!-- Attaching Gifs --&gt;
+                &lt;embed src="gif-file-link/url"/&gt;
+            </pre>
+
+            <ul>
+                <li>controls: shows the play/pause button, volume control and a fullscreen option on the browser.</li>
+                <li>autoplay: automatically plays the video as soon as page is loaded.</li>
+                <li>loop: loops/plays the video repeatedly.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 id="css">CSS</h2>
+        <div class="explanation">
+            <p><strong>3 ways of adding CSS to HTML:</strong> Inline Styles, Internal Stylesheet & External Stylesheet.</p>
+        </div>
+
+        <h3>The Box Model</h3>
+        <div id="box-model">
+            <div class="explanation">
+                <img src="./images/box-model-of-CSS.jpg" class="img-center">
+    
+                <code>min-width: 300px;</code><br>
+                <code>max-width: 600px;</code><br>
+                <code>min-height: 300px;</code><br>
+                <code>min-height: 300px;</code><br>
+            </div> 
+
+            <h3>Box-Sizing <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>box-sizing: border-box;</code>
+
+                <ul>
+                    <li>border-box; - changes box model to include the padding, margin and borders within the element width specified.</li>
+                    <li>By default, the padding, margin and borders add on to the element's width.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Border <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">[Doc]</a></span></h3>
+        <div class="explanation">
+            <code>border: 1px solid black;</code><br>
+            <code>border: border-width border-style border-color;</code>
+
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a> - e.g. 1px </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">border-style</a> - e.g. solid</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a> - e.g. black</li>
+            </ul>
+        </div> 
+
+        <h3>Border Radius <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">[Doc]</a></span></h3>
+        <div class="explanation">
+            <code>border-radius: 5px;</code>
+        </div> 
+
+        <h3>Overflow <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">[Doc]</a></span></h3>
+        <div class="explanation">
+            <code>overflow: scroll; </code>
+
+            <ul>
+                <li>Controls what happens to content that overflows outside of its box.</li>
+            </ul>
+        </div>
+
+        <h3>Accessing different Selectors in CSS</h3>
+        <div class="explanation">
+            <pre>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors">element-name { }</a>
+
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">.class-name { }</a>
+                
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">#id-name { }</a>
+                
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">[attribute-name]{ }</a>
+
+                :Pseudo-class-name { }
+            </pre>
+
+            <ul>
+                <li>Element, Class</li>
+                <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/important">!important</a></code> - override any style no matter how specific it is.</li>
+            </ul>
+        </div>
+
+        <h3>Universal Selector <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors">[Doc]</a></span></h3>
+        <div class="explanation">
+            <pre>
+                * { 
+                    margin: 0;
+                    padding: 0;
+                }
+            </pre>
+            
+            <ul>
+                <li>Selects all elements on the HTML page.</li>
+                <li>Also resets the default css styles of web browsers.</li>
+            </ul>
+        </div>
+
+        <h3>Text</h3>
+        <div id="text">
+            <h3 style="margin-top: 5px;">Font Family <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>font-family: Garamond;</code>
+    
+                <ul>
+                    <li><a href="https://www.cssfontstack.com/">Web safe fonts</a> - a group of fonts supported across most browsers and operating systems.</li>
+                    <li><a href="https://fonts.google.com/">Google fonts</a></li>
+                </ul>
+            </div>
+
+            <h3>Font Weight <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>font-weight: bold;</code>
+            </div>
+
+            <h3>Font Style <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>font-style: italic;</code>
+            </div>
+
+            <h3>Text Align <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>text-align: right;</code>
+            </div>
+
+            <h3>Text Transformation <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>text-transform: uppercase;</code>
+            </div>
+
+            <h3>Text Layout</h3>
+            <div class="explanation">
+                <code>text-transform: uppercase;</code>
+            </div>
+        </div>
+        
+        <h3>Colour</h3>
+        <div id="colour">
+            <div class="explanation">
+                <ol>
+                    Ways to represent colour:
+                    <li>Hexadecimal: #8FBC8F</li>
+                    <li>RGB: rgb(23, 45, 23)</li>
+                    <li>Hue, Saturation, and Lightness: hsl(120, 60%, 70%)</li>
+                </ol>
+
+                <ul>
+                    Opacity - include "a"
+                    <li>hsla(34, 100%, 50%, 0.1)</li>
+                    <li>rgba(234, 45, 98, 0.33)</li>
+                    <li>Named color keyword for zero opacity - transparent - color: transparent;</li>
+                </ul>
+            </div> 
+
+            <h3>Text Colour <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>color: red;</code>
+            </div>
+
+            <h3>Background Colour <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>background-color: blue;</code>
+            </div>
+        </div>
+
+        <h3>Opacity <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">[Doc]</a></span></h3>
+        <div class="explanation">
+            <code>opacity: 0.5;</code>
+        </div>
+
+        <h3>Background Image <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity">[Doc]</a></span></h3>
+        <div class="explanation">
+            <code>background-image: url('image-link / filepath');</code>
+        </div>
+
+        <h3>Visibility <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility">[Doc]</a></span></h3>
+        <div class="explanation">
+            <code>visibility: hidden;</code>
+
+            <ul>
+                What's the difference between display: none and visibility: hidden?
+                <li>display: none; - element is completely removed from web page.</li>
+                <li>visibility: hidden; - element is not visible on web page, but there's space reserved for it.</li>
+            </ul>
+        </div>
+
+        <h3>Positioning</h3>
+        <div id="positioning">
+            <h3 style="margin-top: 5px;">Position <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>position: static;</code>
+    
+                <ul>
+                    <li>Changes the position of an element.</li>
+                    <li><strong>Values: </strong>static, relative, absolute, fixed, sticky</li>
+                </ul>
+            </div>
+
+            <h3>Z-Index <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>z-index: 1;</code>
+
+                <ul>
+                    <li>Needs to be paired with any position values, besides static.</li>
+                    <li>Element with larger Z-index is at the front.</li>
+                </ul>
+            </div>
+
+            <h3>Display <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">[Doc]</a></span></h3>
+            <div class="explanation">
+                <code>display: inline;</code>
+
+                <ul>
+                    <li>Makes it possible for elements to be inline.</li>
+                </ul>
+            </div>
+
+            <h3>
+                Float <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">[Doc]</a></span>
+                & Clear <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear">[Doc]</a></span>
+            </h3>
+            <div class="explanation">
+                <code>float: right;</code>
+                <ul>
+                    <li>Floats elements as far left/right as possible.</li>
+                </ul>
+
+                <code>clear: left;</code>
+                <ul>
+                    <li>Floats may allow multiple elements to float.</li>
+                    <li>Clear defines how these float elements should behave when they bump onto each other.</li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+       
+</body>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Yen Tung</p>
+    </div>
+</footer>
+
+</html>
